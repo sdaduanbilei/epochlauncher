@@ -43,7 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
-            android:name="com.mirasmithy.epochlauncher.LAUNCHER"
+            android:name="com.mirasmithy.epochlauncher.Launcher"
             android:theme="@style/launcherTheme">
 
             <intent-filter>
@@ -61,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <activity
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
-            android:name="com.mirasmithy.epochlauncher.TUTORIAL"
+            android:name="com.mirasmithy.epochlauncher.Tutorial"
             android:theme="@style/tutorialTheme">
 
             <intent-filter>
