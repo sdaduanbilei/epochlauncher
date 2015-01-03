@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 <resources>
 
-    <string name="applicationDescription">A free software launcher for Android™.</string>
+    <string name="applicationDescription">A free software launcher for Android™, inspired by Sword Art Online.</string>
     <string name="applicationLabel">Epoch Launcher</string>
 
 </resources>
