@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Epoch Launcher, a free software launcher for Android™, inspired by Sword Art Online.
+Copyright (C) 2015  Miras Absar
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/HUD"
+        android:layout_width="@dimen/launcherHUDWidth"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/launcherHUDMarginLeft"
+        android:orientation="horizontal"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/itemsBase"
+            android:layout_width="@dimen/launcherItemsBaseWidth"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/itemsIV"
+                android:layout_width="@dimen/launcherItemsWidth"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/launcherItemsMargin"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/launcherItemsDividerHeight"/>
+
+            <ListView
+                android:id="@+id/itemsIII"
+                android:layout_width="@dimen/launcherItemsWidth"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/launcherItemsMargin"
+                android:layout_marginBottom="@dimen/launcherItemsMargin"
+                android:layout_marginRight="@dimen/launcherItemsMargin"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/launcherItemsDividerHeight"/>
+
+            <ListView
+                android:id="@+id/itemsII"
+                android:layout_width="@dimen/launcherItemsWidth"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/launcherItemsMargin"
+                android:layout_marginBottom="@dimen/launcherItemsMargin"
+                android:layout_marginRight="@dimen/launcherItemsMargin"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/launcherItemsDividerHeight"/>
+
+            <ListView
+                android:id="@+id/itemsI"
+                android:layout_width="@dimen/launcherItemsWidth"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/launcherItemsMargin"
+                android:layout_marginBottom="@dimen/launcherItemsMargin"
+                android:layout_marginRight="@dimen/launcherItemsMargin"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/launcherItemsDividerHeight"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/icons"
+            android:layout_width="@dimen/launcherIconsWidth"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/launcherIconsMargin"
+            android:layout_marginBottom="@dimen/launcherIconsMargin"
+            android:layout_marginLeft="@dimen/launcherIconsMargin"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/launcherIconsDividerHeight"/>
+
+    </LinearLayout>
+
+</FrameLayout>

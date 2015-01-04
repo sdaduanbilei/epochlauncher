@@ -43,4 +43,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <dimen name="detailedItemDetailsWidth">212dp</dimen>
     <dimen name="detailedItemDetailsTextSize">12dp</dimen>
 
+    <dimen name="launcherHUDWidth">1304dp</dimen>
+    <dimen name="launcherHUDMarginLeft">-1208dp</dimen>
+    <dimen name="launcherItemsBaseWidth">1208dp</dimen>
+    <dimen name="launcherItemsWidth">272dp</dimen>
+    <dimen name="launcherItemsMargin">24dp</dimen>
+    <dimen name="launcherItemsDividerHeight">6dp</dimen>
+    <dimen name="launcherIconsWidth">48dp</dimen>
+    <dimen name="launcherIconsMargin">24dp</dimen>
+    <dimen name="launcherIconsDividerHeight">24dp</dimen>
+
 </resources>
