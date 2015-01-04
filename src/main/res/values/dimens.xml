@@ -42,7 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <dimen name="detailedItemTextWrapperWidth">212dp</dimen>
     <dimen name="detailedItemTextWrapperHeight">wrap_content</dimen>
     <dimen name="detailedItemTextWrapperVerticalMargin">15.5dp</dimen>
-    <dimen name="detailedItemTextMarginBottom">6dp</dimen>
+    <dimen name="detailedItemTextMarginBottom">7.75dp</dimen>
     <dimen name="detailedItemDetailsWidth">212dp</dimen>
     <dimen name="detailedItemDetailsHeight">wrap_content</dimen>
     <dimen name="detailedItemDetailsTextSize">12dp</dimen>
