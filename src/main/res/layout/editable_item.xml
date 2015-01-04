@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <EditText
         android:id="@+id/text"
         android:layout_width="@dimen/itemTextWidth"
-        android:layout_height="@dimen/itemTextHeight"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/itemTextMarginTop"
         android:textSize="@dimen/itemTextTextSize"
         android:inputType="text"

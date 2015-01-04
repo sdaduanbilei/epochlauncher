@@ -34,17 +34,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <dimen name="itemIconSize">24dp</dimen>
     <dimen name="itemIconMargin">12dp</dimen>
     <dimen name="itemTextWidth">212dp</dimen>
-    <dimen name="itemTextHeight">wrap_content</dimen>
     <dimen name="itemTextMarginTop">15.5dp</dimen>
     <dimen name="itemTextTextSize">17dp</dimen>
 
-    <dimen name="detailedItemHeight">wrap_content</dimen>
     <dimen name="detailedItemTextWrapperWidth">212dp</dimen>
-    <dimen name="detailedItemTextWrapperHeight">wrap_content</dimen>
     <dimen name="detailedItemTextWrapperVerticalMargin">15.5dp</dimen>
     <dimen name="detailedItemTextMarginBottom">7.75dp</dimen>
     <dimen name="detailedItemDetailsWidth">212dp</dimen>
-    <dimen name="detailedItemDetailsHeight">wrap_content</dimen>
     <dimen name="detailedItemDetailsTextSize">12dp</dimen>
 
 </resources>
