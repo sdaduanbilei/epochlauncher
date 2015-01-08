@@ -22,10 +22,6 @@ import android.graphics.drawable.Drawable;
 
 public class ItemData {
 
-    public static final int ITEM = 0;
-    public static final int EDITABLE_ITEM = 1;
-    public static final int DETAILED_ITEM = 2;
-
     private int mLayout;
     private Drawable mIcon;
     private String mText;
@@ -41,15 +37,15 @@ public class ItemData {
     }
 
     public static ItemData newItemData(Drawable pIcon, String pText) {
-        return new ItemData(ITEM, pIcon, pText, null, null);
+        return new ItemData(ItemViewHolder.ITEM, pIcon, pText, null, null);
     }
 
     public static ItemData newEditableItemData(Drawable pIcon, String pText, String pTextHint) {
-        return new ItemData(EDITABLE_ITEM, pIcon, pText, pTextHint, null);
+        return new ItemData(ItemViewHolder.EDITABLE_ITEM, pIcon, pText, pTextHint, null);
     }
 
     public static ItemData newDetailedItemData(Drawable pIcon, String pText, String pDetails) {
-        return new ItemData(DETAILED_ITEM, pIcon, pText, null, pDetails);
+        return new ItemData(ItemViewHolder.DETAILED_ITEM, pIcon, pText, null, pDetails);
     }
 
     public void setIcon(Drawable pIcon) {
@@ -93,12 +89,14 @@ public class ItemData {
         if (pObject instanceof ItemData) {
             ItemData mItemData = (ItemData) pObject;
 
-            if (mLayout == ITEM && mItemData.getLayout() == ITEM) {
+            if (mLayout == ItemViewHolder.ITEM && mItemData.getLayout() == ItemViewHolder.ITEM) {
                 return mIcon.equals(mItemData.getIcon()) && mText.equals(mItemData.getText());
-            } else if (mLayout == EDITABLE_ITEM && mItemData.getLayout() == EDITABLE_ITEM) {
+            } else if (mLayout == ItemViewHolder.EDITABLE_ITEM &&
+                    mItemData.getLayout() == ItemViewHolder.EDITABLE_ITEM) {
                 return mIcon.equals(mItemData.getIcon()) && mText.equals(mItemData.getText()) &&
                         mTextHint.equals(mItemData.getTextHint());
-            } else if (mLayout == DETAILED_ITEM && mItemData.getLayout() == DETAILED_ITEM) {
+            } else if (mLayout == ItemViewHolder.DETAILED_ITEM &&
+                    mItemData.getLayout() == ItemViewHolder.DETAILED_ITEM) {
                 return mIcon.equals(mItemData.getIcon()) && mText.equals(mItemData.getText()) &&
                         mDetails.equals(mItemData.getDetails());
             } else {
@@ -111,9 +109,9 @@ public class ItemData {
 
     @Override
     public int hashCode() {
-        if (mLayout == ITEM) {
+        if (mLayout == ItemViewHolder.ITEM) {
             return mIcon.hashCode() + mText.hashCode();
-        } else if (mLayout == EDITABLE_ITEM) {
+        } else if (mLayout == ItemViewHolder.EDITABLE_ITEM) {
             return mIcon.hashCode() + mText.hashCode() + mTextHint.hashCode();
         } else {
             return mIcon.hashCode() + mText.hashCode() + mDetails.hashCode();
@@ -122,9 +120,9 @@ public class ItemData {
 
     @Override
     public String toString() {
-        if (mLayout == ITEM) {
+        if (mLayout == ItemViewHolder.ITEM) {
             return "ItemData( Layout: " + Integer.toString(mLayout) + " | Text: " + mText + " )";
-        } else if (mLayout == EDITABLE_ITEM) {
+        } else if (mLayout == ItemViewHolder.EDITABLE_ITEM) {
             return "ItemData( Layout: " + Integer.toString(mLayout) + " | Text: " + mText +
                     " | Text Hint: " + mTextHint + " )";
         } else {

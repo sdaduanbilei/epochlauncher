@@ -77,6 +77,13 @@ public class ItemViewHolder {
         }
     }
 
+    public void setTextAndDetailsTypefaceInfo(TypefaceInfo pTypefaceInfo) {
+        mText.setTypeface(pTypefaceInfo.getTypeface());
+        if (mLayout == DETAILED_ITEM) {
+            mDetails.setTypeface(pTypefaceInfo.getTypeface());
+        }
+    }
+
     public void setIconDrawable(Drawable pDrawable) {
         mIcon.setImageDrawable(pDrawable);
     }
