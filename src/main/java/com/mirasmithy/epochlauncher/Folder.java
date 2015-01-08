@@ -40,7 +40,6 @@ public class Folder implements Comparable<Folder> {
             return false;
         } else {
             mName = pName;
-
             return true;
         }
     }
@@ -50,7 +49,6 @@ public class Folder implements Comparable<Folder> {
             return false;
         } else {
             mContents = pContents;
-
             return true;
         }
     }
@@ -69,7 +67,6 @@ public class Folder implements Comparable<Folder> {
         for (int pIndex = mContents.size() - 1; pIndex >= 0; pIndex--) {
             if (!mContents.get(pIndex).isEnabled(pActInfoDatabase)) {
                 mContents.remove(pIndex);
-
                 mModified = true;
             }
         }
@@ -91,7 +88,6 @@ public class Folder implements Comparable<Folder> {
         } else {
             mContents.add(pActInfo);
             Collections.sort(mContents);
-
             return true;
         }
     }
