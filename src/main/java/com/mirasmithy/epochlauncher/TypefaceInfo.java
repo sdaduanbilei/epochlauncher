@@ -40,7 +40,6 @@ public class TypefaceInfo implements Comparable<TypefaceInfo> {
             return false;
         } else {
             mName = pName;
-
             return true;
         }
     }
@@ -50,7 +49,6 @@ public class TypefaceInfo implements Comparable<TypefaceInfo> {
             return false;
         } else {
             mPath = pPath;
-
             return true;
         }
     }
