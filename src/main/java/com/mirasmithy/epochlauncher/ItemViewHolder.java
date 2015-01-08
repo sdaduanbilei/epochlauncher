@@ -57,26 +57,6 @@ public class ItemViewHolder {
         mData = pData;
     }
 
-    public int getLayout() {
-        return mLayout;
-    }
-
-    public LinearLayout getItem() {
-        return mItem;
-    }
-
-    public ImageView getIcon() {
-        return mIcon;
-    }
-
-    public TextView getText() {
-        return mText;
-    }
-
-    public TextView getDetails() {
-        return mDetails;
-    }
-
     public Object getData() {
         return mData;
     }
@@ -111,46 +91,6 @@ public class ItemViewHolder {
 
     public void setDetailsText(String pText) {
         mDetails.setText(pText);
-    }
-
-    @Override
-    public boolean equals(Object pObject) {
-        if (pObject instanceof ItemViewHolder) {
-            ItemViewHolder mItemViewHolder = (ItemViewHolder) pObject;
-
-            if (mLayout == ITEM && mItemViewHolder.getLayout() == ITEM) {
-                return mItem.equals(mItemViewHolder.getItem()) &&
-                        mIcon.equals(mItemViewHolder.getIcon()) &&
-                        mText.equals(mItemViewHolder.getText()) &&
-                        mData.equals(mItemViewHolder.getData());
-            } else if (mLayout == EDITABLE_ITEM && mItemViewHolder.getLayout() == EDITABLE_ITEM) {
-                return mItem.equals(mItemViewHolder.getItem()) &&
-                        mIcon.equals(mItemViewHolder.getIcon()) &&
-                        mText.equals(mItemViewHolder.getText()) &&
-                        mData.equals(mItemViewHolder.getData());
-            } else if (mLayout == DETAILED_ITEM && mItemViewHolder.getLayout() == DETAILED_ITEM) {
-                return mItem.equals(mItemViewHolder.getItem()) &&
-                        mIcon.equals(mItemViewHolder.getIcon()) &&
-                        mText.equals(mItemViewHolder.getText()) &&
-                        mDetails.equals(mItemViewHolder.getDetails()) &&
-                        mData.equals(mItemViewHolder.getData());
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public int hashCode() {
-        if (mLayout == ITEM || mLayout == EDITABLE_ITEM) {
-            return mLayout + mItem.hashCode() + mIcon.hashCode() + mText.hashCode() +
-                    mData.hashCode();
-        } else {
-            return mLayout + mItem.hashCode() + mIcon.hashCode() + mText.hashCode() +
-                    mDetails.hashCode() + mData.hashCode();
-        }
     }
 
 }

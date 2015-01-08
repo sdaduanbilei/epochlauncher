@@ -51,22 +51,6 @@ public class IconViewHolder {
         mData = pData;
     }
 
-    public int getLayout() {
-        return mLayout;
-    }
-
-    public ImageView getBase() {
-        return mBase;
-    }
-
-    public ImageView getItem() {
-        return mItem;
-    }
-
-    public ImageView getIcon() {
-        return mIcon;
-    }
-
     public Object getData() {
         return mData;
     }
@@ -81,37 +65,6 @@ public class IconViewHolder {
 
     public void setIconDrawable(Drawable pDrawable) {
         mIcon.setImageDrawable(pDrawable);
-    }
-
-    @Override
-    public boolean equals(Object pObject) {
-        if (pObject instanceof IconViewHolder) {
-            IconViewHolder mIconViewHolder = (IconViewHolder) pObject;
-
-            if (mLayout == ICON && mIconViewHolder.getLayout() == ICON) {
-                return mBase.equals(mIconViewHolder.getBase()) &&
-                        mItem.equals(mIconViewHolder.getItem()) &&
-                        mIcon.equals(mIconViewHolder.getIcon()) &&
-                        mData.equals(mIconViewHolder.getData());
-            } else if (mLayout == ACTIVITY_ICON && mIconViewHolder.getLayout() == ACTIVITY_ICON) {
-                return mIcon.equals(mIconViewHolder.getIcon()) &&
-                        mData.equals(mIconViewHolder.getData());
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public int hashCode() {
-        if (mLayout == ICON) {
-            return mLayout + mBase.hashCode() + mItem.hashCode() + mIcon.hashCode() +
-                    mData.hashCode();
-        } else {
-            return mLayout + mIcon.hashCode() + mData.hashCode();
-        }
     }
 
 }
