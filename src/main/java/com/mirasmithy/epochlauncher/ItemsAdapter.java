@@ -48,6 +48,7 @@ public class ItemsAdapter extends ArrayAdapter {
 
         mLayoutInflater =
                 (LayoutInflater) pContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         mItemsData = pItemsData;
         mItemsOnTouchListener = pItemsOnTouchListener;
         mTheme = pTheme;
@@ -103,7 +104,6 @@ public class ItemsAdapter extends ArrayAdapter {
 
         if (pView == null) {
             int mItemViewType = getItemViewType(pPosition);
-
             if (mItemViewType == ItemViewHolder.ITEM) {
                 pView = mLayoutInflater.inflate(R.layout.item, pViewGroup, false);
             } else if (mItemViewType == ItemViewHolder.EDITABLE_ITEM) {
@@ -115,7 +115,6 @@ public class ItemsAdapter extends ArrayAdapter {
             pView.setOnTouchListener(mItemsOnTouchListener);
 
             mItemViewHolder = new ItemViewHolder(mItemViewType, (LinearLayout) pView);
-
             pView.setTag(mItemViewHolder);
         } else {
             mItemViewHolder = (ItemViewHolder) pView.getTag();
@@ -124,11 +123,13 @@ public class ItemsAdapter extends ArrayAdapter {
         mItemViewHolder.setData(mData);
 
         mItemViewHolder.theme(mTheme, !mActiveItemsData.contains(mData));
-        mItemViewHolder.setTextAndDetailsTypefaceInfo(mTypefaceInfo);
+        mItemViewHolder.setTypefaceInfo(mTypefaceInfo);
 
         if (mData instanceof ActInfo) {
-            mItemViewHolder.setIconDrawable(((ActInfo) mData).getIcon());
-            mItemViewHolder.setTextText(((ActInfo) mData).getLabel());
+            ActInfo mActInfo = (ActInfo) mData;
+
+            mItemViewHolder.setIconDrawable(mActInfo.getIcon());
+            mItemViewHolder.setTextText(mActInfo.getLabel());
         } else if (mData instanceof Folder) {
             mItemViewHolder.setIconDrawable(mFolder);
             mItemViewHolder.setTextText(((Folder) mData).getName());
@@ -139,17 +140,14 @@ public class ItemsAdapter extends ArrayAdapter {
             mItemViewHolder.setIconDrawable(mPalette);
             mItemViewHolder.setTextText(((TypefaceInfo) mData).getName());
         } else if (mData instanceof ItemData) {
-            if (((ItemData) mData).getLayout() == ItemViewHolder.ITEM) {
-                mItemViewHolder.setIconDrawable(((ItemData) mData).getIcon());
-                mItemViewHolder.setTextText(((ItemData) mData).getText());
-            } else if (((ItemData) mData).getLayout() == ItemViewHolder.EDITABLE_ITEM) {
-                mItemViewHolder.setIconDrawable(((ItemData) mData).getIcon());
-                mItemViewHolder.setTextText(((ItemData) mData).getText());
-                mItemViewHolder.setTextHint(((ItemData) mData).getTextHint());
-            } else if (((ItemData) mData).getLayout() == ItemViewHolder.DETAILED_ITEM) {
-                mItemViewHolder.setIconDrawable(((ItemData) mData).getIcon());
-                mItemViewHolder.setTextText(((ItemData) mData).getText());
-                mItemViewHolder.setDetailsText(((ItemData) mData).getDetails());
+            ItemData mItemData = (ItemData) mData;
+
+            mItemViewHolder.setIconDrawable(mItemData.getIcon());
+            mItemViewHolder.setTextText(mItemData.getText());
+            if (mItemData.getLayout() == ItemViewHolder.EDITABLE_ITEM) {
+                mItemViewHolder.setTextHint(mItemData.getTextHint());
+            } else if (mItemData.getLayout() == ItemViewHolder.DETAILED_ITEM) {
+                mItemViewHolder.setDetailsText(mItemData.getDetails());
             }
         }
 
