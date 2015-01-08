@@ -44,6 +44,7 @@ public class IconsAdapter extends ArrayAdapter {
 
         mLayoutInflater =
                 (LayoutInflater) pContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         mIconsData = pIconsData;
         mIconsOnTouchListener = pIconsOnTouchListener;
         mTheme = pTheme;
@@ -90,7 +91,6 @@ public class IconsAdapter extends ArrayAdapter {
 
         if (pView == null) {
             int mItemViewType = getItemViewType(pPosition);
-
             if (mItemViewType == IconViewHolder.ICON) {
                 pView = mLayoutInflater.inflate(R.layout.icon, pViewGroup, false);
             } else if (mItemViewType == IconViewHolder.ACTIVITY_ICON) {
@@ -100,7 +100,6 @@ public class IconsAdapter extends ArrayAdapter {
             pView.setOnTouchListener(mIconsOnTouchListener);
 
             mIconViewHolder = new IconViewHolder(mItemViewType, pView);
-
             pView.setTag(mIconViewHolder);
         } else {
             mIconViewHolder = (IconViewHolder) pView.getTag();
