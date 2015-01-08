@@ -41,14 +41,10 @@ public class ItemViewHolder {
     public ItemViewHolder(int pLayout, LinearLayout pItem) {
         mLayout = pLayout;
 
-        if (mLayout == ITEM || mLayout == EDITABLE_ITEM) {
-            mItem = pItem;
-            mIcon = (ImageView) mItem.findViewById(R.id.icon);
-            mText = (TextView) mText.findViewById(R.id.text);
-        } else if (mLayout == DETAILED_ITEM) {
-            mItem = pItem;
-            mIcon = (ImageView) mItem.findViewById(R.id.icon);
-            mText = (TextView) mText.findViewById(R.id.text);
+        mItem = pItem;
+        mIcon = (ImageView) mItem.findViewById(R.id.icon);
+        mText = (TextView) mText.findViewById(R.id.text);
+        if (mLayout == DETAILED_ITEM) {
             mDetails = (TextView) mText.findViewById(R.id.details);
         }
     }
@@ -62,7 +58,7 @@ public class ItemViewHolder {
     }
 
     public void theme(Theme pTheme, boolean pSetPassive) {
-        mItem.setBackgroundColor(pTheme.getBaseColor());
+        mItem.setBackgroundColor(pTheme.getItemColor(pSetPassive));
         if (mData instanceof ActInfo) {
             mIcon.clearColorFilter();
         } else {
@@ -77,7 +73,7 @@ public class ItemViewHolder {
         }
     }
 
-    public void setTextAndDetailsTypefaceInfo(TypefaceInfo pTypefaceInfo) {
+    public void setTypefaceInfo(TypefaceInfo pTypefaceInfo) {
         mText.setTypeface(pTypefaceInfo.getTypeface());
         if (mLayout == DETAILED_ITEM) {
             mDetails.setTypeface(pTypefaceInfo.getTypeface());
