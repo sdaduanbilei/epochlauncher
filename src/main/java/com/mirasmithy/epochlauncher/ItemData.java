@@ -91,14 +91,19 @@ public class ItemData {
 
             if (mLayout == ItemViewHolder.ITEM && mItemData.getLayout() == ItemViewHolder.ITEM) {
                 return mIcon.equals(mItemData.getIcon()) && mText.equals(mItemData.getText());
+
             } else if (mLayout == ItemViewHolder.EDITABLE_ITEM &&
                     mItemData.getLayout() == ItemViewHolder.EDITABLE_ITEM) {
+
                 return mIcon.equals(mItemData.getIcon()) && mText.equals(mItemData.getText()) &&
                         mTextHint.equals(mItemData.getTextHint());
+
             } else if (mLayout == ItemViewHolder.DETAILED_ITEM &&
                     mItemData.getLayout() == ItemViewHolder.DETAILED_ITEM) {
+
                 return mIcon.equals(mItemData.getIcon()) && mText.equals(mItemData.getText()) &&
                         mDetails.equals(mItemData.getDetails());
+
             } else {
                 return false;
             }
@@ -123,8 +128,10 @@ public class ItemData {
         if (mLayout == ItemViewHolder.ITEM) {
             return "ItemData( Layout: " + Integer.toString(mLayout) + " | Text: " + mText + " )";
         } else if (mLayout == ItemViewHolder.EDITABLE_ITEM) {
+
             return "ItemData( Layout: " + Integer.toString(mLayout) + " | Text: " + mText +
                     " | Text Hint: " + mTextHint + " )";
+
         } else {
             return "ItemData( Layout: " + Integer.toString(mLayout) + " | Text: " + mText +
                     " | Details: " + mDetails + " )";
