@@ -57,7 +57,6 @@ public class Theme implements Comparable<Theme> {
             return false;
         } else {
             mName = pName;
-
             return true;
         }
     }
@@ -67,7 +66,6 @@ public class Theme implements Comparable<Theme> {
             return false;
         } else {
             mColor = pColor;
-
             return true;
         }
     }
@@ -77,7 +75,6 @@ public class Theme implements Comparable<Theme> {
             return false;
         } else {
             mAccentColor = pAccentColor;
-
             return true;
         }
     }
@@ -105,14 +102,19 @@ public class Theme implements Comparable<Theme> {
         mBaseColorFilter = new PorterDuffColorFilter(mBaseColor, PorterDuff.Mode.MULTIPLY);
         mPassiveItemColor = setAlpha(mColor, ITEM_ALPHA);
         mActiveItemColor = setAlpha(mAccentColor, ITEM_ALPHA);
+
         mPassiveItemColorFilter = new PorterDuffColorFilter(mPassiveItemColor,
                 PorterDuff.Mode.MULTIPLY);
+
         mActiveItemColorFilter = new PorterDuffColorFilter(mActiveItemColor,
                 PorterDuff.Mode.MULTIPLY);
+
         mPassiveIconColorFilter = new PorterDuffColorFilter(
                 setAlpha(mComplementaryColor, ICON_ALPHA), PorterDuff.Mode.MULTIPLY);
+
         mActiveIconColorFilter = new PorterDuffColorFilter(setAlpha(mColor, ICON_ALPHA),
                 PorterDuff.Mode.MULTIPLY);
+
         mPassiveTextColor = setAlpha(mComplementaryColor, TEXT_ALPHA);
         mActiveTextColor = setAlpha(mColor, TEXT_ALPHA);
         mPassiveTextHintColor = setAlpha(mComplementaryColor, TEXT_HINT_ALPHA);
