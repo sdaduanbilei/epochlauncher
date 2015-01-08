@@ -39,7 +39,7 @@ public class IconsAdapter extends ArrayAdapter {
     public IconsAdapter(Context pContext, ArrayList pIconsData,
                         View.OnTouchListener pIconsOnTouchListener, Theme pTheme,
                         HashSet pActiveIconsData) {
-        
+
         super(pContext, R.layout.icon, pIconsData);
 
         mLayoutInflater =

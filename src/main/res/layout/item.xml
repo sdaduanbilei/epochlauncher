@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_marginLeft="@dimen/itemIconMargin"
         android:layout_marginRight="@dimen/itemIconMargin"
         android:scaleType="fitCenter"/>
-    
+
     <TextView
         android:id="@+id/text"
         android:layout_width="@dimen/itemTextWidth"
