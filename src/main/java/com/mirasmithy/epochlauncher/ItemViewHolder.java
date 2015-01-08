@@ -53,6 +53,10 @@ public class ItemViewHolder {
         mData = pData;
     }
 
+    public TextView getText() {
+        return mText;
+    }
+
     public Object getData() {
         return mData;
     }

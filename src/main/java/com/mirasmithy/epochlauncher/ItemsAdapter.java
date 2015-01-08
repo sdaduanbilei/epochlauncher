@@ -113,6 +113,9 @@ public class ItemsAdapter extends ArrayAdapter {
             }
 
             pView.setOnTouchListener(mItemsOnTouchListener);
+            if (mItemViewType == ItemViewHolder.EDITABLE_ITEM) {
+                new EditableItemTextWatcher((LinearLayout) pView);
+            }
 
             mItemViewHolder = new ItemViewHolder(mItemViewType, (LinearLayout) pView);
             pView.setTag(mItemViewHolder);
