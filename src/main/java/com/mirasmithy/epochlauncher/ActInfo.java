@@ -76,10 +76,10 @@ public class ActInfo implements Comparable<ActInfo> {
         if (mComponentName == null) {
             mComponentName = new ComponentName(mPackageName, mClassName);
         }
-
         if (mLaunchIntent == null) {
             mLaunchIntent = new Intent(Intent.ACTION_MAIN);
             mLaunchIntent.setComponent(mComponentName);
+
             mLaunchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                     Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
         }
@@ -109,6 +109,7 @@ public class ActInfo implements Comparable<ActInfo> {
 
             return mPackageName.equals(mActInfo.getPackageName()) &&
                     mClassName.equals(mActInfo.getClassName());
+
         } else {
             return false;
         }
