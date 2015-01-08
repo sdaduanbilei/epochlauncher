@@ -174,6 +174,7 @@ public class Theme implements Comparable<Theme> {
 
             return mName.equals(mTheme.getName()) && (mColor == mTheme.getColor()) &&
                     (mAccentColor == mTheme.getAccentColor());
+
         } else {
             return false;
         }
