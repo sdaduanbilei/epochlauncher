@@ -66,7 +66,7 @@ public class TypefaceInfo implements Comparable<TypefaceInfo> {
     public boolean setTypeface(AssetManager pAssetManager) {
         if (mPath.substring(0,9).equals(ASSETS_PATH)) {
             try {
-                Typeface.createFromAsset(pAssetManager, mPath.substring(9));
+                mTypeface = Typeface.createFromAsset(pAssetManager, mPath.substring(9));
 
                 return true;
             } catch (Exception pException) {
@@ -74,7 +74,7 @@ public class TypefaceInfo implements Comparable<TypefaceInfo> {
             }
         } else {
             try {
-                Typeface.createFromFile(mPath);
+                mTypeface = Typeface.createFromFile(mPath);
 
                 return true;
             } catch (Exception pException) {
