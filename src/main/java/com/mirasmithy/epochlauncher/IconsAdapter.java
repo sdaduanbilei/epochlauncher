@@ -32,16 +32,19 @@ public class IconsAdapter extends ArrayAdapter {
 
     LayoutInflater mLayoutInflater;
     ArrayList mIconsData;
-    View.OnTouchListener mIconOnTouchListener;
+    View.OnTouchListener mIconsOnTouchListener;
     Theme mTheme;
     HashSet mActiveIconsData;
 
-    public IconsAdapter(Context pContext, ArrayList pIconsData, View.OnTouchListener pIconOnTouchListener, Theme pTheme, HashSet pActiveIconsData) {
+    public IconsAdapter(Context pContext, ArrayList pIconsData,
+                        View.OnTouchListener pIconsOnTouchListener, Theme pTheme,
+                        HashSet pActiveIconsData) {
         super(pContext, R.layout.icon, pIconsData);
 
-        mLayoutInflater = (LayoutInflater) pContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mLayoutInflater =
+                (LayoutInflater) pContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mIconsData = pIconsData;
-        mIconOnTouchListener = pIconOnTouchListener;
+        mIconsOnTouchListener = pIconsOnTouchListener;
         mTheme = pTheme;
         mActiveIconsData = pActiveIconsData;
     }
@@ -93,7 +96,7 @@ public class IconsAdapter extends ArrayAdapter {
                 pView = mLayoutInflater.inflate(R.layout.activity_icon, pViewGroup, false);
             }
 
-            pView.setOnTouchListener(mIconOnTouchListener);
+            pView.setOnTouchListener(mIconsOnTouchListener);
 
             mIconViewHolder = new IconViewHolder(mItemViewType, pView);
 
