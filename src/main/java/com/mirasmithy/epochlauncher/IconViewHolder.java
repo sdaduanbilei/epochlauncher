@@ -47,8 +47,8 @@ public class IconViewHolder {
         }
     }
 
-    public void setData(Object pObject) {
-        mData = pObject;
+    public void setData(Object pData) {
+        mData = pData;
     }
 
     public int getLayout() {
