@@ -35,14 +35,14 @@ public class ItemsAdapter extends ArrayAdapter {
     ArrayList mItemsData;
     View.OnTouchListener mItemsOnTouchListener;
     Theme mTheme;
+    HashSet mActiveItemsData;
     TypefaceInfo mTypefaceInfo;
     Drawable mFolder;
     Drawable mPalette;
-    HashSet mActiveItemsData;
 
     public ItemsAdapter(Context pContext, ArrayList pItemsData,
                         View.OnTouchListener pItemsOnTouchListener, Theme pTheme,
-                        TypefaceInfo pTypefaceInfo, HashSet pActiveItemsData) {
+                        HashSet pActiveItemsData, TypefaceInfo pTypefaceInfo) {
 
         super(pContext, R.layout.item, R.id.text, pItemsData);
 
@@ -52,10 +52,10 @@ public class ItemsAdapter extends ArrayAdapter {
         mItemsData = pItemsData;
         mItemsOnTouchListener = pItemsOnTouchListener;
         mTheme = pTheme;
+        mActiveItemsData = pActiveItemsData;
         mTypefaceInfo = pTypefaceInfo;
         mFolder = pContext.getResources().getDrawable(R.drawable.folder);
         mPalette = pContext.getResources().getDrawable(R.drawable.palette);
-        mActiveItemsData = pActiveItemsData;
     }
 
     public void setTheme(Theme pTheme) {
