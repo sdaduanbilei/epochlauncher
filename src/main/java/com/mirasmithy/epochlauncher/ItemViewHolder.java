@@ -43,9 +43,9 @@ public class ItemViewHolder {
 
         mItem = pItem;
         mIcon = (ImageView) mItem.findViewById(R.id.icon);
-        mText = (TextView) mText.findViewById(R.id.text);
+        mText = (TextView) mItem.findViewById(R.id.text);
         if (mLayout == DETAILED_ITEM) {
-            mDetails = (TextView) mText.findViewById(R.id.details);
+            mDetails = (TextView) mItem.findViewById(R.id.details);
         }
     }
 
