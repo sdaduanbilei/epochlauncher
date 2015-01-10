@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/iconSize"
     android:layout_height="@dimen/iconSize">
 
@@ -29,7 +30,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_height="@dimen/iconBaseSize"
         android:layout_centerInParent="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/circle"/>
+        android:src="@drawable/circle"
+        tools:suppress="ContentDescription"/>
 
     <ImageView
         android:id="@+id/item"
@@ -37,13 +39,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_height="@dimen/iconItemSize"
         android:layout_centerInParent="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/circle"/>
+        android:src="@drawable/circle"
+        tools:suppress="ContentDescription"/>
 
     <ImageView
         android:id="@+id/icon"
         android:layout_width="@dimen/iconIconSize"
         android:layout_height="@dimen/iconIconSize"
         android:layout_centerInParent="true"
-        android:scaleType="fitCenter"/>
+        android:scaleType="fitCenter"
+        tools:suppress="ContentDescription"/>
 
 </RelativeLayout>
