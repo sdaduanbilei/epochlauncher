@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_marginRight="@dimen/itemIconMargin"
         android:layout_gravity="center_vertical"
         android:scaleType="fitCenter"
-        tools:suppress="ContentDescription"/>
+        tools:ignore="ContentDescription"/>
 
     <LinearLayout
         android:layout_width="@dimen/detailedItemTextWrapperWidth"

@@ -31,7 +31,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_centerInParent="true"
         android:scaleType="fitCenter"
         android:src="@drawable/circle"
-        tools:suppress="ContentDescription"/>
+        tools:ignore="ContentDescription"/>
 
     <ImageView
         android:id="@+id/item"
@@ -40,7 +40,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_centerInParent="true"
         android:scaleType="fitCenter"
         android:src="@drawable/circle"
-        tools:suppress="ContentDescription"/>
+        tools:ignore="ContentDescription"/>
 
     <ImageView
         android:id="@+id/icon"
@@ -48,6 +48,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_height="@dimen/iconIconSize"
         android:layout_centerInParent="true"
         android:scaleType="fitCenter"
-        tools:suppress="ContentDescription"/>
+        tools:ignore="ContentDescription"/>
 
 </RelativeLayout>
