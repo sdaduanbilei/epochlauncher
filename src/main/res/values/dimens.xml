@@ -53,4 +53,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <dimen name="launcherIconsMargin">24dp</dimen>
     <dimen name="launcherIconsDividerHeight">24dp</dimen>
 
+    <dimen name="tutorialApplicationLabelTextSize">34dp</dimen>
+    <dimen name="tutorialApplicationLabelMargin">24dp</dimen>
+    <dimen name="tutorialApplicationDescriptionTextSize">17dp</dimen>
+    <dimen name="tutorialApplicationDescriptionMargin">24dp</dimen>
+
 </resources>
