@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <style
         name="launcherTheme"
-        parent="@android:style/Theme.Material.Light.NoActionBar.TranslucentDecor">
+        parent="@android:style/Theme.Material.Light.NoActionBar">
 
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
