@@ -28,11 +28,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowShowWallpaper">true</item>
 
+        <item name="android:colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
     </style>
 
     <style
         name="tutorialTheme"
-        parent="@android:style/Theme.Material.Light.NoActionBar.TranslucentDecor">
+        parent="@android:style/Theme.Material.NoActionBar">
     </style>
 
 </resources>
